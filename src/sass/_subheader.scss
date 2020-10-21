@@ -1,0 +1,41 @@
+.subheader {
+	min-height: 470px;
+	text-align: center;
+	h2.title {
+		margin-top: 69px;
+		font-size: 30px;
+		font-weight: 700;
+		color: #0d0d0d;
+	}
+	&_wrapper {
+		margin: 65px 0 95px 0;
+		display: flex;
+		justify-content: space-between;
+		.title {
+			font-size: 18px;
+			font-weight: 700;
+			color: #0d0d0d;
+			margin-top: 38px;
+		}
+		img {
+			width: 70px;
+			height: 70px;
+		}
+		.discr {
+			margin-top: 26px;
+			text-align: center;
+			max-width: 250px;
+			font-size: 14px;
+			font-weight: 600;
+			color: #0d0d0d;
+			a {
+			text-decoration: underline;
+			color: $main-color;
+			text-transform: uppercase;
+			cursor: pointer;
+			}
+		}
+		
+	}
+}
+@import "../sass/media";
