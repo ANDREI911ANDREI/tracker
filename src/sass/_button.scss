@@ -23,10 +23,36 @@
         border: none;
     }
 }
+@media (max-width:768px){
+    .button {
+        width: 120px;
+        height: 18px;
+        background-color:$main-color;
+        border-radius: 5px;
+        font-size: 10px;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: $main-white;
+        display: block;
+        border: none;
+        &_button_main {
+            margin-top: 20px;
+            width: 200px;
+            height: 30px;
+            background-color:$main-color;
+            border-radius: 5px;
+            font-size: 12px;
+            font-weight: 400;
+            text-transform: uppercase;
+            color: $main-white;
+            border: none;
+        }
+    }
+}
 @media (max-width:575px){
 .button {
     width: 120px;
-    height: 20px;
+    height: 18px;
     background-color:$main-color;
     border-radius: 5px;
     font-size: 10px;
