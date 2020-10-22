@@ -143,5 +143,155 @@
 	}
 }
 @media (max-width:575px){
+.header{
+	display: flex;
+	flex-direction: column;
+	vertical-align: center;
+	&__logo {
+		cursor: pointer;
+		width: 300px;
+		img {
+			width: 100%;
+		}
+	}
+	&__oficial {
+		margin-top: 15px;
+		font-size: 14px;
+		font-weight: 500;
+		color: $main-white;
+		text-align: center;
+		p {
+			margin-top: 15px;
+			font-size: 16px;
+			font-weight: 700;
+			color:$main-white;
+			line-height: 5px;
+			display: block;
+			margin-top: 5px;
+		}
+	}
+	&__phone {
+		text-align: center;
+		display: block;
+		margin: 0 auto;
+		font-size: 16px;
+		font-weight: 700;
+		color: $main-white;
+		margin-bottom: 15px;
+		&:hover {
+			transition: 1s all;
+			font-size: 18px;
+			color: $main-color;
+			text-decoration: none;
+		}
+	}
+	&__contacts {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 }
-
+.promo {
+	max-height: 550px;
+	padding: 21px 0 20px 0;
+	.promo__wrapper {
+		padding: 35px 0 35px 0;
+		display: flex;
+		flex-direction:column;
+		align-items: center;
+		.promo__header{
+			text-align: center;
+			font-size: 24px;
+			font-weight: 700;
+			text-transform: uppercase;
+			color: #ffffff;
+			line-height: 24px;
+		}
+		.promo__subheader{
+			text-align: center;
+			font-size: 16px;
+			font-weight: 500;
+			text-transform: uppercase;
+			color: #ffffff;
+			line-height: 16px;
+		}
+		.promo__icons {
+			margin-top: 20px;
+			max-width:300px;
+			display: flex;
+			justify-content: space-between;
+			.promo__icon {
+				width: 100px;
+				min-width: 80px;
+				text-align: center;
+				font-size: 10px;
+				line-height: 1.2;
+				font-weight: 500;
+				color: #ffffff;
+				img {
+					display: block;
+					margin: 0 auto;
+					margin-bottom: 15px;
+				}
+			}
+			
+		}
+		.promo__link {
+			display: none;
+			font-size: 14px;
+			line-height: 1.2;
+			font-weight: 500;
+			color: #ffffff;
+			margin-top: 18px;
+				a {  
+					color: #ffffff;
+					text-decoration: underline;
+				}
+				
+		}
+	}
+}		
+.subheader {
+	min-height: 420px;
+	text-align: center;
+	.title {
+		margin-top: 10px;
+		font-size: 20px;
+		font-weight: 700;
+		color: #0d0d0d;
+	}
+	&_wrapper {
+		margin: 10px 0 10px 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		.title {
+			font-size: 24px;
+			font-weight: 700;
+			color: #0d0d0d;
+			margin-top: 5px;
+		}
+		img {
+			margin-top: 15px;
+			width: 70px;
+			height: 70px;
+		}
+		.discr {
+			display: block;
+			margin: 0 auto;
+			margin-top: 20px;
+			max-width: 200px;
+			font-size: 14px;
+			font-weight: 500;
+			color: #0d0d0d;
+			a {
+			text-decoration: underline;
+			color: $main-color;
+			text-transform: uppercase;
+			cursor: pointer;
+			}
+		}
+			
+	}
+}	
+}
