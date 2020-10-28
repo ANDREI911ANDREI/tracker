@@ -45,9 +45,12 @@
 	}  
 	&__content{
 		margin-top: 60px;
-		display: flex;
 		justify-content: space-between;
-		flex-wrap: wrap;
+        flex-wrap: wrap;
+        display: none;
+        &_active{
+            display: flex;
+        }
 	}
 	&-item {
         width: 300px;
@@ -135,6 +138,7 @@
             padding-left: 19px;
             margin-bottom: 0;
             list-style-type: none;
+            text-transform: uppercase;
             &_active {
                 transform: translateX(-100%);
                 margin-left: 0px;
