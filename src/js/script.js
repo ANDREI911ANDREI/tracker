@@ -9,14 +9,14 @@ $('.carusel_slider').slick({
 		{
 			breakpoint: 992,
 			settings: {
-				dots: true ,
+				dots: false ,
 				arrows: false 
 			}
 		},
 		{
 			breakpoint: 768,
 			settings: {
-				dots: false ,
+				dots: false,
 				arrows: false 
 			}
 		},
@@ -30,7 +30,7 @@ $('.carusel_slider').slick({
 		{
 			breakpoint: 480,
 			settings: {
-				dots: false ,
+				dots: false,
 				arrows: false 
 			}
 		}

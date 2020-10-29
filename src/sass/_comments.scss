@@ -1,0 +1,63 @@
+@import'../sass/variables';
+@import"../sass/media";
+.comments{
+	h2.title{
+		text-align: center;
+		font-size: 30px;
+		font-weight: 700;
+		text-transform: uppercase;
+		color: #0d0d0d;
+	}
+	&__new{
+		margin-top: 70px;
+		margin-bottom: 40px;
+		:nth-child(2){
+			margin-top:calc(70px-35px);
+		}
+		:nth-child(3){
+			margin-top:35px;
+		}
+		.wrapper{		
+			position: relative;	
+			display: flex;
+			justify-content: space-around;			
+			img{
+				/*position: absolute;*/
+				display: block;
+				width: 200px;
+				height: 200px;
+			}
+			.comment{
+				max-width: 650px;
+				min-height: 169px;
+				&_title{
+					font-size: 18px;
+					font-weight: 700;
+					color: #0d0d0d;
+					line-height: 1,2;	
+				}
+				&_subtitle {
+					margin-top: 10px;
+					font-size: 14px;
+					font-weight: 300;
+					color: #646464;	
+					line-height: 1,2;				
+				}
+				&_descr{
+					margin-top: 19px;
+					font-size: 14px;
+					font-weight: 400;
+					color: #0d0d0d;
+					line-height: 1,2;	
+				}
+		}
+		}   
+	}
+	hr{
+		max-width: 940px;
+		height: 1px;
+		background-color: #f6f6f6;
+		border-top: none;
+	}
+	
+}
