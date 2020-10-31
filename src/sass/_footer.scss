@@ -1,0 +1,51 @@
+.footer{
+	height: 630px;
+    position: relative;
+	&__info{
+		position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 460px;
+        height: 270px;
+        background-color: $main-color;
+        padding: 0px 68px 60px 68px;
+		&_adress{
+			margin-top: 50px;
+			font-size: 20px;
+			line-height: 1.2;
+			font-weight: 500;
+			color: #ffffff;
+		}
+		&_contact{
+			margin-top: 36px;
+			font-size: 20px;
+			line-height: 1.2;
+			font-weight: 700;
+			color: #ffffff;
+		}
+		&_icon{
+			padding-left: 25px;
+			display: flex;
+			justify-content: space-around;
+			margin:0 auto;
+			max-width: 300px;
+			min-width: 150px;
+			margin-top: 38px;
+			a{
+				display: block;
+				cursor: pointer;
+			}
+			.img{
+				margin-right: 25px;
+				img{
+				width: 50px;
+				height: 50px;
+				}
+			.img:nth-child(3){
+				margin-right: -25px;
+			}
+			}
+		}
+	}
+}
