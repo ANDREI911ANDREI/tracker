@@ -11,7 +11,7 @@
 	<title>Puls</title>
 </head>
 <body>
- <section class="promo">
+ <section id='up' class="promo">
 	 <div class="container">
 		 <header class="header">
 			 <a href="#" class="header__logo ">
@@ -59,16 +59,16 @@
 		</div>
 	</div>
  </section> 
- <section class="consultation">
+ <section class="consultation" id="promo">
 	 <div class="container">
 		 <h2 class="title">Получите бесплатную консультацию<br>
 			по подбору пульсометра</h2>
 		 <h2 class="subtitle">Просто заполните форму заявки <br>
 			и мы перезвоним вам в течении 10 минут</h2>
 		 <form action="#" class="consult_form">
-			 <input type="text" required placeholder="ваше имя" >
-			 <input style="resize:none" type="number" type="tel" required placeholder="ваш номер телефона" >
-			 <input type="email" required placeholder="ваш E-mail адрес" >
+			 <input name="name" type="text" placeholder="ваше имя" >
+			 <input name="phone" style="resize:none" placeholder="ваш номер телефона" >
+			 <input name="email" type="email" placeholder="ваш E-mail адрес" >
 			 <button>заказать консультацию</button>
 		 </form>
 	 </div>
@@ -483,9 +483,8 @@
 		</div>
 	</div>
 </footer>
-
 <div class="overlay">
-	<div class="modal" id="consultation">
+	<div class="modal" id="consultation" >
 		<div class="modal__close">
 			&times;
 		</div>
@@ -495,16 +494,16 @@
 		<div class="modal__descr">
 			и мы перезвоним вам в течении 10 минут
 		</div>		
-		<form action="#" class="form">
-			<input type="text" required placeholder="ваше имя" >
-			<input style="resize:none" type="number" type="tel" required placeholder="ваш номер телефона" >
-			<input type="email" required placeholder="ваш E-mail адрес" >
+		<form  action="#"  class="consult_form">
+			<input name="name" type="text" placeholder="ваше имя" >
+			<input name="phone" style="resize:none" placeholder="ваш номер телефона" >
+			<input name="email" type="email" placeholder="ваш E-mail адрес" >
 			<button>заказать консультацию</button>
 		</form>
 	</div>
-	<div class="modal" id="order">
+	<div class="modal" id="order" >
 		<div class="modal__close">
-			&times;
+			
 		</div>
 		<div class="modal__subtitle">
 			ваш заказ:
@@ -512,10 +511,10 @@
 		<div class="modal__descr">
 			Пульсометр Polar FT1
 		</div>		
-		<form action="#" class="form">
-			<input type="text" required placeholder="ваше имя" >
-			<input style="resize:none" type="number" type="tel" required placeholder="ваш номер телефона" >
-			<input type="email" required placeholder="ваш E-mail адрес" >
+		<form  action="#" class="consult_form">
+			<input name="name" type="text" placeholder="ваше имя" >
+			<input  name="phone" style="resize:none" type="tel" placeholder="ваш номер телефона" >
+			<input name="email" type="email" placeholder="ваш E-mail адрес" >
 			<button>купить</button>
 		</form>
 	</div>
@@ -532,9 +531,17 @@
 		</div>		
 	</div>
 </div>
+
+<a href="#up" class="pageup">
+	<img src="icons/up.svg" alt="up" >
+</a>
+
+
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script src="js/slick.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/jquery.maskedinput.min.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>

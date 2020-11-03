@@ -59,7 +59,7 @@ $('.catalog-item__back').each(function(i) {/* работа ссылки НАЗА
 
 	/*модальные окна*/
 
-	$('[data-modal=consultation]').on('click', function(){ /*назначает работу модыльного окна при нажатии на заданную кнопку */
+	$('[data-modal=consultation]').on('click', function(){ /*назначает работу модального окна при нажатии на заданную кнопку */
 		$('.overlay,#consultation').fadeIn('slow');
 	});
 	$('.modal__close').on('click',function(){ /* назначает закрытие модального окна при нажатии на крестик*/
@@ -73,5 +73,72 @@ $('.catalog-item__back').each(function(i) {/* работа ссылки НАЗА
 		});
 	});
 });
+function validateForms(form){
+	$(form).validate({
+		rules: {
+			name: {
+				required: true,
+				minlength: 2
+			},
+			phone: "required",
+			email: {
+				required: true,
+				email: true
+			}
+		},
+		messages: {
+			name: {
+				required: "Пожалуйста, введите свое имя",
+				minlength: jQuery.validator.format("Введите {0} символа!")
+			  },
+			phone: "Пожалуйста, введите свой номер телефона",
+			email: {
+			  required: "Пожалуйста, введите свою почту",
+			  email: "Неправильно введен адрес почты"
+			}
+		}
+	});
+};
+
+validateForms('#promo form');
+validateForms('#consultation form');
+validateForms('#order form');
+
+
+$('input[name=phone]').mask("+7 (999) 999-99-99"); //маска номера 
+
+	$('form').submit(function(e) {  // отправка формы на почту 
+		e.preventDefault();
+		$.ajax({
+			type: "POST",
+			url: "mailer/smart.php",
+			data: $(this).serialize()
+		}).done(function() {
+			$(this).find("input").val("");
+			$('#consultation, #order').fadeOut();
+			$('.overlay, #thanks').fadeIn('slow');
+
+			$('form').trigger('reset');
+		});
+		return false;
+	});
+
+// плавный скролл and page up
+
+$(window).scroll(function(){
+	if($(this).scrollTop() > 800){
+		$('.pageup').fadeIn();
+	} else{
+		$('.pageup').fadeOut();
+	}
+});
+$("a[href^='#']").click(function(){
+	var _href = $(this).attr("href");
+	$("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+	return false;
+});	
+
+
+
 
 
