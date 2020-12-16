@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="css/bootstrap-reboot.min.css">
 	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
 	<link rel="stylesheet" href="css/styles.min.css">
-	<link rel="stylesheet" type="text/css" href="css/slick.css"/>
+	<link rel="stylesheet" href="css/slick.css"/>
 	<title>Puls</title>
 </head>
 <body>
@@ -66,9 +66,10 @@
 		 <h2 class="subtitle">Просто заполните форму заявки <br>
 			и мы перезвоним вам в течении 10 минут</h2>
 		 <form action="#" class="consult_form">
-			 <input name="name" type="text" placeholder="ваше имя" >
-			 <input name="phone" style="resize:none" placeholder="ваш номер телефона" >
-			 <input name="email" type="email" placeholder="ваш E-mail адрес" >
+			 <input name="name" type="text" required placeholder="ваше имя" >
+			 <input name="phone" type="number" style="resize:none" required placeholder="ваш номер телефона" >
+			 <input name="email" type="email" required placeholder="ваш E-mail адрес" >
+			 
 			 <button>заказать консультацию</button>
 		 </form>
 	 </div>
@@ -78,10 +79,6 @@
 		<div class="carusel_slider">
 			<div>
 				<img src="img/carusel/1.jpg" alt="clock"></div>
-			<div>
-				<img src="img/carusel/2.jpg" alt="clock"></div>
-			<div>
-				<img src="img/carusel/3.jpg" alt="clock"></div>
 		</div>
 	</div>
  </section>
@@ -501,7 +498,7 @@
 	</div>
 	<div class="modal" id="order" >
 		<div class="modal__close">
-			
+			&times;
 		</div>
 		<div class="modal__subtitle">
 			ваш заказ:
@@ -534,7 +531,7 @@
 	<img src="icons/up.svg" alt="up" >
 </a>
 
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script src="js/slick.min.js"></script>
