@@ -29,6 +29,7 @@
 		font-weight: 700;
 		color: $main-white;
 		&:hover {
+			text-decoration: none;
 			text-decoration: underline none;
 			color:$main-white;
 		}
